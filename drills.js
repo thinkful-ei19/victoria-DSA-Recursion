@@ -26,6 +26,18 @@ double([1, 2, 3]);
 
 //Reverse Str
 
+function reverse(str) {
+  if (str.length === 1) {
+    return str;
+  }
+
+  const lastChar = str[str.length - 1];
+
+  return lastChar + reverse(str.slice(0, -1));
+}
+
+reverse('hello');
+
 //nth Triangular Number
 
 function triangular(num) {
